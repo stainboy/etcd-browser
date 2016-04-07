@@ -1,16 +1,11 @@
-FROM ubuntu:14.04
+FROM hyper.cd/core/nodejs:4.2.6
 
-MAINTAINER Christoph Wiechert <wio@psitrax.de>
-MAINTAINER https://github.com/henszey
+ADD . /opt/etcd-browser/
 
-RUN apt-get update
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get install -y nodejs
+# WORKDIR /app
+# EXPOSE 8000
+# CMD ["nodejs", "server.js"]
 
-RUN mkdir /app
-ADD . /app/
+WORKDIR /opt/etcd-browser
+ENTRYPOINT ["node", "server.js"]
 
-WORKDIR /app
-EXPOSE 8000
-
-CMD ["nodejs", "server.js"]
