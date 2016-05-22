@@ -1,1 +1,1 @@
-hyper.cd/core/etcd-browser:ff499a9
+hyper.cd/core/etcd-browser:1.0

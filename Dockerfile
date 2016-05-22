@@ -1,4 +1,4 @@
-FROM hyper.cd/core/nodejs:4.2.6
+FROM hyper.cd/core/nodejs:4.4.3
 
 ADD . /opt/etcd-browser/
 
